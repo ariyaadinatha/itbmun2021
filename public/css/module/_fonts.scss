@@ -1,0 +1,175 @@
+/* Lemon Milk ======================= */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i,800,800i|Titillium+Web:300,300i,400,400i,600,600i,700,700i&display=swap');
+// font-family: 'Titillium Web', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+@font-face {
+  font-family: 'Lemon/Milk Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk Regular'), url('../font/lemonmilk/LemonMilk.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Lemon/Milk Regular italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk Regular italic'), url('../font/lemonmilk/LemonMilkitalic.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Lemon/Milk light italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk light italic'), url('../font/lemonmilk/LemonMilklightitalic.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Lemon/Milk Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk Bold'), url('../font/lemonmilk/LemonMilkbold.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Lemon/Milk Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk Bold'), url('../font/lemonmilk/LemonMilkbolditalic.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Lemon/Milk light Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lemon/Milk light Regular'), url('../font/lemonmilk/LemonMilklight.woff') format('woff');
+  }
+
+/* HelveticaNeue ======================= */
+
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 55 Roman';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 55 Roman'), url('../font/HelveticaNeue/HelveticaNeueLTPro-Roman.woff') format('woff');
+  }
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 56 Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 56 Italic'), url('../font/HelveticaNeue/HelveticaNeueLTPro-It.woff') format('woff');
+  }
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 45 Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 45 Light'), url('../font/HelveticaNeue/HelveticaNeueLTPro-Lt.woff') format('woff');
+  }
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 46 Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 46 Light Italic'), url('../font/HelveticaNeue/HelveticaNeueLTPro-LtIt.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 65 Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 65 Medium'), url('../font/HelveticaNeue/HelveticaNeueLTPro-Md.woff') format('woff');
+  }
+
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 66 Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 66 Medium Italic'), url('../font/HelveticaNeue/HelveticaNeueLTPro-MdIt.woff') format('woff');
+  }
+  
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 75 Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 75 Bold'), url('../font/HelveticaNeue/HelveticaNeueLTPro-Bd.woff') format('woff');
+  }
+  
+@font-face {
+  font-family: 'Helvetica Neue LT Pro 76 Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue LT Pro 76 Bold Italic'), url('../font/HelveticaNeue/HelveticaNeueLTPro-BdIt.woff') format('woff');
+  }
+
+// Silly Mixins karena gua males haha
+// ==================================
+@mixin titilliumWeb() {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+@mixin montserrat() {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin lemonMilkRegular() {
+  font-family: 'Lemon/Milk Regular';
+}
+
+@mixin lemonMilkRegularItalic() {
+  font-family: 'Lemon/Milk Regular italic';
+}
+
+@mixin lemonMilkLightItalic() {
+  font-family: 'Lemon/Milk light italic';
+}
+
+@mixin lemonMilkBold() {
+  font-family: 'Lemon/Milk Bold';
+}
+
+@mixin lemonMilkLightRegular() {
+  font-family: 'Lemon/Milk light Regular';
+}
+
+@mixin helveticaNeue() {
+  font-family: 'Helvetica Neue LT Pro 55 Roman';
+}
+
+@mixin helveticaNeueItalic() {
+  font-family: 'Helvetica Neue LT Pro 56 Italic';
+}
+
+@mixin helveticaNeueLight() {
+  font-family: 'Helvetica Neue LT Pro 45 Light';
+}
+
+@mixin helveticaNeueLightItalic() {
+  font-family: 'Helvetica Neue LT Pro 46 Light Italic';
+}
+
+@mixin helveticaNeueMedium() {
+  font-family: 'Helvetica Neue LT Pro 65 Medium';
+}
+
+@mixin helveticaNeueMediumItalic() {
+  font-family: 'Helvetica Neue LT Pro 66 Medium Italic';
+}
+
+@mixin helveticaNeueBold() {
+  font-family: 'Helvetica Neue LT Pro 75 Bold';
+}
+
+@mixin helveticaNeueBoldItalic() {
+  font-family: 'Helvetica Neue LT Pro 76 Bold Italic';
+}
+

@@ -1,0 +1,56 @@
+// Color
+$theme-colors: (
+    "black": #000000,
+    "white": #FFFFFF,
+
+    //Primary Colors
+    "primary-light": #BF8CD9,
+    "primary": #5B4566,
+    "primary-dark": #321740,
+    "primary-darker": #23102D,
+    "primary-darkest": #120817,
+    
+    //Secondary Colors
+    "secondary-lightest": #FD92A4,
+    "secondary-lighter": #F46279,
+    "secondary-light": #EA5A5A,
+    "secondary": #D02B2F,
+
+    //Primary Alt Colors
+    "primary-alt-lighter": #BAC7D8,
+    "primary-alt-light": #8D9EBC,
+    "primary-alt": #1C355E,
+    "primary-alt-dark": #142542,
+
+    //Primary Alt Colors
+    "secondary-alt-light": #96E3BF,
+    "secondary-alt": #07E288,
+
+    //Main Colors
+    "title-main": #FFFFFF,
+    "heading-main": #F6F6F6,
+    "paragraph-main": #C6C6C6,
+    "link-main": #D4D4D4,
+
+    //Article Colors
+    "title-article": #060606,
+    "heading-article": #242424,
+    "paragraph-article": #424242,
+
+);
+
+// Media Queries and Breakpoints
+    // Breakpoints
+    $bp-small: 76.8rem;
+    $bp-medium: 102.4rem;
+    $bp-large: 136.6rem;
+    $bp-xlarge: 192.0rem;
+    $bp-xxlarge: 256.0rem;
+
+    // Media Queries
+    $mq-small: "(min-width: #{$bp-small})";
+    $mq-medium: "(min-width: #{$bp-medium})";
+    $mq-large: "(min-width: #{$bp-large})";
+    $mq-xlarge: "(min-width: #{$bp-xlarge})";
+    $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+    $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";

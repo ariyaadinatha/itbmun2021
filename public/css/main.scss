@@ -1,0 +1,233 @@
+/* =================================================================== 
+ *
+ *  ITBMUN 2020 Main Stylesheet
+ *  29-07-2019
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *      # A. Import Modules
+ *      # B. Default Colors
+ *      # C. Navigation Bar
+ *          -- 1. Navbar
+ *          -- 2. Sidebar
+ *      # D. Footer
+ *      # E. Main Sections
+ *          -- 1. Hero
+ *          -- 2. Remarks
+ *          -- 3. Date & Venue
+ *          -- 4. Councils
+ *          -- 5. Supports
+ *      # F. Remark Sections
+ *          -- 1. Hero
+ *          -- 2. Body
+ *      # G. About Sections
+ *          -- 1. Hero
+ *          -- 2. Body
+ *      # H. Council Sections
+ *          -- 1. Hero
+ *          -- 2. Body
+ *      # I. Registration Sections
+ *          -- 1. Hero
+ *          -- 2. Body
+ *      # J. Admin Sections
+ *          -- 1. Login
+ *
+ * =================================================================== */
+
+/* ===================================================================
+ * # A. Import Module
+ * ------------------------------------------------------------------- */
+ @import 'module/math';
+ @import 'module/mixin-fluid';
+ @import 'module/variable';
+ @import 'module/fonts';
+ @import 'module/elevation-shadow';
+ @import 'module/hamburger';
+ @import 'module/section';
+ @import 'module/button';
+ @import 'module/typography';
+
+/* # End of Import Module
+ * ----------------------- */
+
+/* ===================================================================
+ * # B. Default Colors & Utilities
+ * ------------------------------------------------------------------- */
+body {
+    background-color: map-get($theme-colors, "black");
+    color: map-get($theme-colors, "paragraph-main");
+    font-size:1.6rem;
+    @include titilliumWeb();
+}
+
+h1 {
+    color: map-get($theme-colors, "heading-main");
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    color: map-get($theme-colors, "title-main");
+    @include lemonMilkRegular();
+}
+
+.divider-main {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: map-get($theme-colors, "paragraph-main");
+}
+
+/* # End of Default Colors
+ * ----------------------- */
+
+/* ===================================================================
+ * # C. Navigation for Main
+ * ------------------------------------------------------------------- */
+ // -- 1. Navbar   
+    @import "blocks/main/navbar/navbar-top";
+
+ // -- 2. Sidebar
+    @import "blocks/main/navbar/sidebar";
+
+/* # End of Navigation for Main
+ * ----------------------- */
+
+/* ===================================================================
+ * # D. Footer
+ * ------------------------------------------------------------------- */
+
+ @import "blocks/main/footer";
+
+ /* # End of Footer
+  * ----------------------- */
+
+/* ===================================================================
+ * # E. Main Sections
+ * ------------------------------------------------------------------- */
+
+// -- 1. Hero Section
+    @import "blocks/main/sections/hero";
+    @import "blocks/main/sections/intro";
+
+// -- 2. Remark Section
+    @import "blocks/main/sections/remark";
+
+// -- 3. Registration Section
+    @import "blocks/main/sections/registration";
+
+// -- 4. Date & Venue Section
+    @import "blocks/main/sections/venue";
+
+// -- 5. Councils Section
+    @import "blocks/main/sections/councils";
+
+// -- 6. Supports Section
+    @import "blocks/main/sections/supports";
+
+// -- 7. Hotel Section
+    @import "blocks/main/hotel/hero";
+    @import "blocks/main/hotel/blurb";
+    @import "blocks/main/hotel/facilities";
+
+/* # End of Main Sections
+ * ----------------------- */
+
+/* ===================================================================
+ * # F. Remark Sections
+ * ------------------------------------------------------------------- */
+
+// -- 1. Hero Section
+    @import "blocks/main/remark/hero";
+
+// -- 2. Body Content Section
+    @import "blocks/main/remark/body";
+
+/* # End of Remark Sections
+ * ----------------------- */
+
+/* ===================================================================
+ * # G. Councils Sections
+ * ------------------------------------------------------------------- */
+
+// -- 1. Hero Section
+    @import "blocks/councils/hero";
+
+// -- 2. Body Content Section
+    @import "blocks/councils/body";
+
+/* # End of Councils Sections
+ * ----------------------- */
+
+/* ===================================================================
+ * # H. About Section
+ * ------------------------------------------------------------------- */
+
+// -- 1. Hero Section
+    @import "blocks/about/hero";
+
+// -- 2. Body Content Section
+    @import "blocks/about/body";
+
+/* # End of About Sections
+ * ----------------------- */
+
+/* ===================================================================
+ * # I. Registration Section
+ * ------------------------------------------------------------------- */
+
+// -- 1. Hero Section
+    @import "blocks/registration/hero";
+
+// -- 2. Body Content Section
+    @import "blocks/registration/body";
+
+// -- 3. After Registration Section
+    @import "blocks/registration/after";
+
+// -- 4. Registration Information
+    @import "blocks/registration/info";
+
+/* # End of Registration Sections
+ * ----------------------- */
+
+/* ===================================================================
+ * # J. Admin Section
+ * ------------------------------------------------------------------- */
+
+// -- 1. Login Section
+    @import "blocks/admin/signin";
+
+// -- 2. Dashboard
+    @import "blocks/admin/dashboard/main";
+
+/* # End of Admin Sections
+ * ----------------------- */
+
+ /* ===================================================================
+ * # K. Press Index Section
+ * ------------------------------------------------------------------- */
+
+// -- 1. Press Hero Section
+    @import "blocks/press/hero";
+
+// -- 2. Index
+    @import "blocks/press/index";
+
+// -- 3. Post
+    @import "blocks/press/post";
+
+/* # End of Press Sections
+ * ----------------------- */
+
+  /* ===================================================================
+ * # L. Gossip Index Section
+ * ------------------------------------------------------------------- */
+
+// -- 1. Press Hero Section
+    @import "blocks/gossip/hero";
+
+// -- 2. Index
+    @import "blocks/gossip/index";
+
+/* # End of Press Sections
+ * ----------------------- */

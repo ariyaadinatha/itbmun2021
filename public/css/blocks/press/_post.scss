@@ -1,0 +1,128 @@
+.post-hero{
+    @include sectionProperties(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include fluidpaddingy(2rem, 3rem);
+    display: flex;
+    align-items: flex-end;
+    background-position-y: 70%;
+
+    @media screen and (max-width:960px) {
+        background-position-x: 60%;
+        @include sectionProperties(60%);
+    }
+
+    .post-title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20%;
+        padding-right: 20%;
+
+        @media screen and (max-width: 960px){
+            @include fluidpaddingx(2rem, 5rem);
+        }
+
+        h1{
+            @include lemonMilkRegular();
+            @include fluidfontsize(2.4rem, 3.0rem);
+            @include fluidletterspacing(1.8px, 4.8px);
+            line-height: 1.4;
+            margin-bottom: 0;
+
+            @include fluidpaddingleft(0, 0);
+    
+            @media screen and (max-width:960px){
+                line-height: 1.5;
+            }
+        }
+
+        p{
+            @include fluidfontsize(1.2rem, 1.4rem);
+            margin-bottom: 0;
+        }
+    }
+}
+
+.post-content{
+    @include sectionProperties(50%);
+
+    padding-left: 20%;
+    padding-right: 20%;
+
+    @include fluidpaddingy(2rem, 3rem);
+
+    @media screen and (max-width: 960px) {
+        @include fluidpaddingx(2rem, 4rem);       
+    }
+
+    h1{
+        @include h1main();
+        @include fluidpaddingx(0, 0);
+    }
+
+    h2{
+        @include h2main();
+    }
+    
+    h3{
+        @include h3main();
+    }
+    
+    p{
+        @include paragraphMain();
+
+        a{
+            text-decoration: underline !important;
+            transition: all 0.1s;
+
+            &:hover{
+                color: map-get($theme-colors, 'secondary-light');
+            }
+        }
+    }
+
+    blockquote{
+        @include fluidpaddingleft(1.5rem, 3.5rem);
+
+        p {
+            font-style: italic;
+            @include fluidfontsize(1.6rem, 2rem);
+            font-weight: 700;
+            color: #cfcfcf;
+            line-height: 1.3;
+        }
+    }
+
+    .post-navigation-top{
+        margin-bottom: 2rem;
+
+        a {
+            @include fluidfontsize(1.2rem, 1.4rem);
+            @include montserrat();
+            font-weight: 700;
+            transition: 0.1s all;
+            
+            &:hover{
+                color: map-get($theme-colors, 'secondary-light');
+            }
+        }
+    }
+}
+
+.post-metadata{
+    padding-left: 20%;
+    padding-right: 20%;
+
+    @media screen and (max-width: 960px) {
+        @include fluidpaddingx(2rem, 4rem);       
+    }
+
+    margin-bottom: 2rem;
+
+    p{
+        @include paragraphMain();
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}

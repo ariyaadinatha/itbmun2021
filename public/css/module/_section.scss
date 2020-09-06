@@ -1,0 +1,4 @@
+@mixin sectionProperties($height){
+    width:100%;
+    min-height:$height;
+}

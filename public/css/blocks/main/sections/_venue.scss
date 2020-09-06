@@ -1,0 +1,87 @@
+.main-venue{
+    @include fluidmarginy(3.0rem, 8.5rem);
+    @include sectionProperties(50%);
+
+    h1{
+        @include h1main();
+    }
+
+    .main-venue-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        width:100%;
+        min-height:25rem;
+
+        @media screen and (max-width:960px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-between;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .main-venue-image{
+            width:50%;
+            @include fluidheight(15rem, 25rem);
+            background: linear-gradient(180deg, #000000 0%, rgba(91, 69, 102, 0.4) 50%, #000000 100%), url(../assets/main/venue.jpg);                
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 80%;
+
+            @media screen and (max-width:960px) {
+                width:100%;
+            }
+        }
+
+        .main-venue-content{
+            max-width:50%;
+            min-height:20rem;
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: space-between;
+            justify-content: space-between;
+            flex-direction: column;
+            color: white;
+            padding-left: 5rem;
+
+            @include fluidpaddingy(2rem, 3rem);
+
+            @media screen and (max-width:960px){
+                max-width:100%;
+                padding-left:0px;
+                @include fluidpaddingx(2rem, 3rem);
+            }
+
+            h2{
+                @include fluidfontsize(1.8rem, 2.4rem);
+                @include fluidletterspacing(1.4px, 2px);
+                font-weight:700;
+                b{
+                    font-weight: 700;
+                }
+            }
+
+            div{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                p{
+                    @include fluidmarginbottom(1rem, 1.5rem);
+                    @include fluidfontsize(1.2rem, 1.6rem);
+                }
+
+                a{
+                    width: fit-content;
+                }
+
+                @media screen and (max-width:960px){
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

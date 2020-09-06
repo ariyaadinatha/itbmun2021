@@ -1,0 +1,60 @@
+footer{
+    min-height:30rem;
+    width:100%;
+    background-color: map-get($theme-colors, "primary-darkest" );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fluidpaddingy(2rem, 5rem);
+    @include helveticaNeue();
+
+    .footer-section{
+        @include fluidminwidth(20rem, 64rem);
+        @include fluidpaddingy(1rem, 2rem);
+        
+        @media screen and (max-width:960px) {
+           @include fluidpaddingx(2rem, 0rem)
+        }
+
+        .contact-wrapper{
+            display: flex;
+            flex-direction: row;
+
+            a{
+                color: #ffffff;
+                transition: all 0.3s;
+            }
+            
+            a:hover{
+                text-decoration: none;
+                color: map-get($theme-colors, "secondary-light" )
+            }
+            
+            a:active{
+                text-decoration: none;
+                color: map-get($theme-colors, "secondary" )
+            }
+
+            a:not(:first-child){
+                margin-left: 2rem;
+            }
+
+            img{
+                @include fluidwidth(3rem, 7rem);
+                @include fluidmarginbottom(0.5rem, 1.2rem);
+            }
+        }
+    }
+
+    h2{
+        @include titilliumWeb();
+        @include fluidfontsize(2.8rem, 3.6rem);
+        font-weight: 700;
+        color: map-get($theme-colors, "heading-main") !important;
+    }
+
+    p{
+        @include fluidfontsize(1.2rem, 1.6rem);
+        color: map-get($theme-colors, "paragraph-main") !important;
+    }
+}

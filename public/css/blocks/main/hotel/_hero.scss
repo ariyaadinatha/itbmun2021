@@ -1,0 +1,93 @@
+$time : 60s;
+
+.hotel-hero{
+    @import '../../../module/anchor';
+    @include sectionProperties(80%);
+    background: linear-gradient(359.87deg, #000000 4.51%, rgba(35, 16, 45, 0.4) 85.49%), url(../assets/hotelPage/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    
+    @media screen and (max-width:960px) {
+        @include sectionProperties(50%);
+        background-position-y: 100%;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    @media screen and (min-width: 960px){
+        -moz-animation: hero $time linear 0s infinite;
+        -o-animation: hero $time linear 0s infinite;
+        animation: hero $time linear 0s infinite;
+    }
+
+    .hotel-hero-layer1{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 100%;
+        width: 100%;
+        @include fluidpaddingx(2rem, 5rem);
+
+        h1 {
+            @include lemonMilkRegular();
+            @include fluidfontsize(3rem, 4.8rem);
+            @include fluidletterspacing(1.8px, 4.8px);
+            @include fluidpaddingleft(-0.18rem, -0.48rem);
+            line-height: 1.4;
+            font-weight: 400;
+            margin-block-end: 0;
+            margin-block-start: 0;
+        }
+
+        h3 {
+            @include fluidfontsize(1.6rem, 2.4rem);
+            @include fluidletterspacing(0.5px, 1px);
+            @include fluidpaddingleft(-0.05rem, -0.10rem);
+            font-weight: 700;
+            margin-block-end: 1rem;
+            margin-block-start: 0;
+            color: white;
+        }
+
+        @media screen and (min-width: 960px){
+            -moz-animation: layer $time ease-in-out 0s infinite;
+            -o-animation: layer $time ease-in-out 0s infinite;
+            animation: layer $time ease-in-out 0s infinite;
+        }
+
+    }
+}
+
+@keyframes layer{
+    $on : rgba(0, 0, 0, 0);
+    $off : rgba(0, 0, 0, 1);
+
+    0%, 100% {
+        background-color: $off;
+    }
+
+    5%, 95% {
+        background-color: $on;
+    }
+}
+
+@keyframes hero{
+    0%{
+        background-size: 100%;
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+
+    50%{
+        background-size: 100%;
+        background-position-x: 0%;
+        background-position-y: 100%;
+    }
+
+    100%{
+        background-size: 150%;
+        background-position-x: 50%; 
+        background-position-y: 50%;
+    }
+}

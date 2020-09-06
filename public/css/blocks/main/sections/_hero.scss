@@ -1,0 +1,56 @@
+.main-hero{
+    @import '../../../module/anchor';
+    @include sectionProperties(100%);
+        background: linear-gradient(359.87deg, #000000 4.51%, rgba(35, 16, 45, 0.4) 85.49%), url(../assets/main/mainSection-bgHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media screen and (max-width:960px) {
+        background-position-x: 60%;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    } 
+
+    .main-hero-container{
+        @include fluidpadding(2rem, 5rem);
+        width: 100%;
+
+        .main-hero-content{
+            align-self: center; 
+        }
+        
+        .scroll-down{
+            @include montserrat();
+            @include fluidfontsize(1.4rem, 1.8rem);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            display:flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .interlude{
+            @include titilliumWeb();
+            font-weight:700;
+            @include fluidfontsize(1.4rem, 2.8rem);
+            color: map-get($theme-colors, "primary-light");
+        }
+        
+        .grand-theme{
+            @include lemonMilkRegular();
+            @include fluidfontsize(1.8rem, 4.8rem);
+            @include fluidletterspacing(1.8px, 4.8px);
+            line-height: 1.4;
+
+            @media screen and (max-width:960px){
+                line-height: 1.5;
+            }
+        }
+    }
+}

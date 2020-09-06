@@ -1,0 +1,401 @@
+.registration-body{
+    @include sectionProperties(60%);
+    width: 100%;
+    padding-left: 32%;
+    padding-right: 32%;
+    @include fluidpaddingy(2rem, 3rem);
+    
+    @media screen and (max-width: 960px) {
+        @include fluidpaddingx(2rem, 12rem);
+    }
+
+    .registration-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width:100%;
+        min-height:15rem;
+
+        h1{
+            @include h1main();
+            @include fluidfontsize(2.0rem, 3.6rem);
+        }
+
+        h2{
+            @include h2main();
+        }
+
+        p{
+            @include paragraphMain();
+            margin-bottom: 0px;
+        }
+
+        .nav-button-wrapper{
+            display: flex !important;
+            min-width: 100%;
+            justify-content: space-between;
+        }
+
+        .registration-card-wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            width:100%;
+            overflow: hidden;
+
+            .registration-form__delegate-choice{
+                width: 100%;
+                display: flex;
+                align-items: center;
+    
+                &.delegate{
+                    background: 
+                        linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                        rgba(50, 23, 64, 0.3) 80.76%), 
+                        url('../assets/registration/cardDelegate.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
+                    background-position-y: 50%;
+                }
+    
+                &.delegation{
+                    background: 
+                        linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                        rgba(50, 23, 64, 0.3) 80.76%), 
+                        url('../assets/registration/cardDelegation.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
+                    background-position-y: 50%;
+                }
+
+                &.delegation-choice-5, &.delegation-choice-8{
+                    margin-top: .8rem;
+                    padding-left: 1.5rem;
+                    border: 1px solid transparent;
+                    @include fluidheight(4rem, 6rem);
+                    transition: all 0.3s;
+
+                    &:hover{
+                        cursor: pointer;
+                        border: 1px solid map-get($theme-colors, "secondary-light");
+
+                        h2 {
+                            color: map-get($theme-colors, "secondary-light");
+                        }
+                    }
+                }
+
+                &.delegate, &.delegation{
+                    @include fluidheight(10rem, 15rem);
+                    transition: all 0.3s;
+                }
+    
+                &.delegate:hover, &.delegation:hover{
+                    cursor: pointer;
+                    
+                    h2{
+                        color: map-get($theme-colors, "secondary-light");
+                    }
+                }
+
+                &.delegate:hover, &.delegation:hover{
+                    transform: translateX(5%);
+                }
+            }
+        }
+
+        .form-page, .form-tab{
+            display: none;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            min-width:100%;
+            min-height: 15rem;
+
+            &.is-active{
+                display: flex;
+            }
+
+            .form-tabs-navigator{
+                height: 4rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .form-tabs-button{
+                    @include fluidfontsize(1.2rem, 1.4rem);
+                    font-weight: 700;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: map-get($theme-colors, 'secondary-light');
+                    }
+                }
+            }
+        }
+
+        .registration-form-wrapper{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            min-width:100%;
+            min-height: 15rem;
+
+            .registration-form-header{
+                width: 100%;
+                @include fluidheight(10rem, 15rem);
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                &.individual-delegate{
+                    background: 
+                        linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                        rgba(50, 23, 64, 0.3) 80.76%), 
+                        url('../assets/registration/cardDelegate.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
+                    background-position-y: 50%;
+                }
+
+                &.delegation{
+                    background: 
+                        linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                        linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                        rgba(50, 23, 64, 0.3) 80.76%), 
+                        url('../assets/registration/cardDelegation.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position-x: 100%;
+                    background-position-y: 50%;
+                }
+            }
+
+            h1{
+                padding-left: 0;
+                padding-right: 0;
+                margin: 0;
+            }
+
+            .registration-row{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+                @include fluidminheight(7.5rem, 9rem);
+                width: 100%;
+
+                @media screen and (max-width: 540px) {
+                    flex-direction: column;
+                }
+
+                .registration-col{
+                    min-height: 100%;
+                    display: block;
+                    position: relative;
+                    @include fluidmarginy(1.5rem, 2rem);
+
+                    &.r-col-12{
+                        width: 80%;
+
+                        @media screen and (max-width: 960px){
+                            width: 100%;
+                        }
+
+                        span.info{
+                            width: 70%;
+                        }
+
+                        span.required{
+                            width: 30%;
+                        }
+                    }
+
+                    &.r-col-6{
+                        width: 46%;
+
+                        @media screen and (max-width: 960px){
+                            width: 70%;
+                        }
+
+                        @media screen and (max-width: 540px){
+                            width: 100%;
+                        }
+
+                        .registration-info{
+                            display: flex;
+
+                            span.info{
+                                width: 70%;
+                            }
+    
+                            span.required{
+                                width: 30%;
+                            }
+                        }
+                    }
+
+                    .registration-radio-wrapper{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .radio-header{
+                            font-weight: 700;
+                            margin-bottom: 1rem;
+                            font-size: 110%;
+                        }
+
+                        label{
+                            @include fluidfontsize(1.2rem, 1.4rem);
+                            margin-bottom: 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            flex-direction: row-reverse;
+
+                            .radio-button{
+                                width: 19px;
+                                height: 19px;
+                                background-color: transparent;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                transition: all .2s;
+                            }
+
+                            input[type=radio]{
+                                display: none;
+
+                                & + .radio-button{
+                                    border: 2px solid #e5e5e5;
+                                }
+                                
+                                &:checked + .radio-button{
+                                    border: 2px solid map-get($theme-colors, 'secondary-light');
+
+                                    & span{
+                                        width: 10px;
+                                        height: 10px;
+                                        display: inline-block;
+                                        border-radius: 50%;
+                                        background-color: map-get($theme-colors, 'secondary-light');
+                                        transition: all .2s;
+                                    }
+                                }
+                            }
+
+                            .radio-description{
+                                margin-left: .6rem;
+                                display: inline;
+                            }
+                        }
+                    }
+
+                    .registration-info{
+                        @include fluidfontsize(1.1rem, 1.2rem);
+                        margin-block-end: 0px;
+                        margin-bottom: 0px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span.required{
+                            color: map-get($theme-colors, "secondary");
+                            font-weight: 700;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: baseline;
+                        }
+                    }
+
+                    .error{
+                        border-color: map-get($theme-colors, "secondary");
+
+                        &+label{
+                            color: map-get($theme-colors, "secondary");
+                        }
+                    }
+
+                    .error-message{
+                        color: map-get($theme-colors, "secondary");
+                        @include fluidfontsize(1.1rem, 1.2rem);
+                        margin-block-end: 0px;
+                        margin-bottom: 0px;
+                        padding-bottom: 10px;
+                        font-weight: 700;
+                    }
+                }
+
+                .text-label{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    z-index: 1;
+                    color: map-get($theme-colors, "paragraph-main");
+                    @include fluidfontsize(1.2rem, 1.6rem);
+                    transition:0.2s ease all;
+                    margin-bottom: 0 !important;
+                }
+
+                input[type=text], input[type=email], .txta{
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid map-get($theme-colors, "paragraph-main");
+                    background-color: transparent;
+                    width: 100%;
+                    @include paragraphMain();
+                    margin-bottom: 0;
+                    transition:0.2s ease all;
+
+                    &:focus, &:not(:placeholder-shown){
+                        outline: none;
+                        border-bottom: 1px solid map-get($theme-colors, "secondary-light" )
+                    }
+
+                    &:focus+.text-label, &:not(:placeholder-shown)+.text-label{
+                        top: -20px;
+                        color: map-get($theme-colors, "secondary-light");
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+
+        .summary, .summary-delegation{
+            width: 100%;
+            height: 30rem;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar{
+                width: .5rem;
+            }
+
+            &::-webkit-scrollbar-track{
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 2.5px;
+                transition: all 0.2s;
+
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}

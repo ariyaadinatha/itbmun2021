@@ -1,0 +1,88 @@
+.main-supports{
+    @include fluidmarginy(3.0rem, 8.5rem);
+    @include sectionProperties(50%);
+
+    h1{
+        @include h1main();
+    }
+
+    .main-supports-wrapper{
+        width:100%;
+        height:30rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction:row;
+
+        @media screen and (max-width:960px){
+            flex-direction: column;
+        }
+
+        .main-support-card{
+            width:100%;
+            height:30rem;
+            overflow: hidden;
+            
+            @media screen and (max-width:960px){
+                height:10rem;
+            }
+
+            .bg-sponsors, .bg-medpar, .bg-others{
+                display: flex;
+                align-items: flex-end;
+                width:100%;
+                height:100%;
+                transition: all .3s;
+
+                @include fluidpaddingy(2.0rem, 2.0rem);
+                @include fluidpaddingx(2.0rem, 3.0rem);
+
+                h2{
+                    @include fluidfontsize(2.0rem, 2.4rem);
+                    font-weight:700;
+                }   
+            }
+
+            .bg-sponsors:hover, .bg-medpar:hover, .bg-others:hover{
+                transform: scale(1.1);
+                color: map-get($theme-colors, "secondary-light" );
+
+                @media screen and (max-width:960px) {
+                    transform: translateX(10%);
+                }
+            }
+
+            .bg-sponsors{
+                background: 
+                    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                    linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                    rgba(50, 23, 64, 0.3) 80.76%), 
+                    url('../assets/stock/Source/Sponsors.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .bg-medpar{
+                background: 
+                    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                    linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                    rgba(50, 23, 64, 0.3) 80.76%), 
+                    url('../assets/stock/Source/Medpar.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .bg-others{
+                background: 
+                    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                    linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+                    rgba(50, 23, 64, 0.3) 80.76%), 
+                    url('../assets/stock/Source/Support.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}

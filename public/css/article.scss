@@ -1,0 +1,235 @@
+/* =================================================================== 
+ *
+ *  ITBMUN 2020 Article Stylesheet
+ *  29-07-2019
+ *  ------------------------------------------------------------------
+ *
+ *
+ * =================================================================== */
+
+/* ===================================================================
+ * # A. Import Module
+ * ------------------------------------------------------------------- */
+ @import 'module/math';
+ @import 'module/mixin-fluid';
+ @import 'module/variable';
+ @import 'module/fonts';
+ @import 'module/elevation-shadow';
+ @import 'module/hamburger';
+ @import 'module/section';
+ @import 'module/button';
+ @import 'module/typography';
+ @import 'module/anchor-article';
+
+/* # End of Import Module
+ * ----------------------- */
+
+/* ===================================================================
+ * # B. Default Colors etc
+ * ------------------------------------------------------------------- */
+body {
+    background-color: map-get($theme-colors, "white");
+    color: map-get($theme-colors, "paragraph-article");
+    font-size:1.6rem;
+    @include titilliumWeb();
+}
+
+h1 {
+    color: map-get($theme-colors, "heading-1-article");
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    color: map-get($theme-colors, "title-article");
+    @include lemonMilkRegular();
+}
+
+/* # End of Default Colors
+ * ----------------------- */
+
+/* ===================================================================
+ * # C. Navigation for Article
+ * ------------------------------------------------------------------- */
+ // -- 1. Navbar   
+    @import "blocks/article/navbar/navbar-top";
+
+ // -- 2. Sidebar
+    @import "blocks/article/navbar/sidebar";
+
+/* # End of Navigation for Main
+ * ----------------------- */
+
+/* ===================================================================
+ * # D. Footer
+ * ------------------------------------------------------------------- */
+
+ @import "blocks/main/footer";
+
+ /* # End of Footer
+  * ----------------------- */
+
+/* ===================================================================
+ * # E. Article
+ * ------------------------------------------------------------------- */
+
+ .article-container{
+    @include sectionProperties(100%);
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+    @include fluidpaddingx(2rem, 4rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .article-wrapper{
+        width: 60%;
+        min-height: 20rem;
+        @include anchorStyleArticle2();
+
+        @media screen and (max-width: 960px){
+            @include fluidwidth(28rem, 76rem);
+        }
+
+        .image-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include fluidpaddingy(2rem, 4rem);
+
+            .council-logo{
+                @include fluidheight(24rem, 24rem);
+            }
+        }
+
+        .title{
+            @include h1titlearticle();
+        }
+        
+        h1{
+            @include h1article();
+        }
+
+        h2{
+            @include h2article();
+        }
+
+        h3{
+            @include h3article();
+        }
+
+        p{
+            @include paragraphArticle();
+        }
+    }
+ }
+
+ .council-container{
+    @mixin backgroundCouncil(){
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include fluidpaddingy(2rem, 2.8rem);
+    }
+
+    @include sectionProperties(100%);
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .council-wrapper{
+        @include anchorStyleArticle2();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 20rem;
+
+        .council-header{
+            width: 60%;
+            @include anchorStyleArticle2();
+            
+            @media screen and (max-width: 960px){
+                width: 100%;
+                @include fluidpaddingx(2rem, 4rem);
+            }    
+        }
+
+        .council-image-container{
+            width: 100%;
+            @include fluidmarginy(3rem, 4rem);
+            display: flex;
+            justify-content: center;
+
+            .council-logo{
+                @include fluidheight(24rem, 24rem);
+            }
+        }
+
+        .council-background-crisis{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/crisis.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-disec{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/disec.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-unca{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/press.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-unep{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/unep.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-unesco{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/unesco.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-unsc{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/unsc.gif);
+            @include backgroundCouncil();
+        }
+
+        .council-background-wha{
+            background:linear-gradient(180deg, #424242 0%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.5) 80%, #424242 100%), url(../assets/councils/gif/wha.gif);
+            @include backgroundCouncil();
+        }
+        
+        .council-content{
+            width: 60%;
+
+            @media screen and (max-width: 960px){
+                width: 100%;
+                @include fluidpaddingx(2rem, 4rem);
+            }    
+        }
+
+        .title{
+            @include h1titlearticle();
+        }
+        
+        h1{
+            @include h1article();
+        }
+
+        h2{
+            @include h2article();
+        }
+
+        h3{
+            @include h3article();
+        }
+
+        p{
+            @include paragraphArticle();
+        }
+    }
+}

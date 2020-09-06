@@ -1,0 +1,148 @@
+.txta {
+    width: 100%;
+    @include titilliumWeb();
+    @include fluidpaddingy(0.5rem, 0.8rem);
+    @include fluidfontsize(1.2rem, 1.6rem);
+    min-height: 1.6rem;
+    line-height: 1.4;
+    overflow: hidden;
+    resize: none;
+    background-color: rgba(0,0,0,0);
+    color: #ffffff;
+    outline: none;
+    border: 1px solid #eeeeee;
+}
+
+.gossip-index{
+    @include sectionProperties(50%);
+    background-color: #0c0c0c;
+
+    padding-left: 20%;
+    padding-right: 20%;
+
+    @include fluidpaddingy(3rem, 5rem);
+
+    @media screen and (max-width: 960px) {
+        padding-left: 0;
+        padding-right: 0;        
+    }
+
+    .gossip-none{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        h2{
+            @include h2main();
+            padding-bottom: 2rem;
+        }
+    }
+
+    .gossip-navigation{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include fluidmarginy(2rem, 2.5rem);
+        @include montserrat();
+        @include fluidfontsize(1.2rem, 1.4rem);
+        font-weight: 700;
+
+        .page-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            @include fluidwidth(3rem, 3.5rem); 
+            @include fluidheight(3rem, 3.5rem);
+            background-color: #0c0c0c;
+            border-radius: 5px;
+            color: white;
+            transition: all 0.3s;
+
+            &:hover{
+                border: none;
+                color: white;
+                background-color: map-get($theme-colors, "secondary-light");
+            }
+        }
+
+        .page-item.active{
+            .page-link {
+                background-color: darken(map-get($theme-colors, "secondary-light"), 2%);
+            }
+        }
+
+        .page-item.disabled{
+            .page-link {
+                color: #545454;
+            }
+        }
+    }
+
+    .gossip-container{
+        width: 100%;
+        padding-right: 20%;
+        padding-left: 20%;
+        @include fluidpaddingy(3rem, 3rem);
+
+        @media screen and (max-width: 960px) {
+            @include fluidpaddingx(2rem, 5rem);
+        }
+
+        .gossip {
+            width: 100%;
+            border-radius: 0.5rem;
+            @include fluidpaddingx(1.2rem, 1.6rem);
+            @include fluidpaddingy(1.2rem, 1.2rem);
+            margin-bottom: 1rem;
+            background-color: #111111;
+            box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.05), 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+            .gossip-header{
+                display: flex;
+                @include fluidfontsize(1rem, 1.2rem);
+
+                .gossip-sender{
+                    color: white;
+                    font-weight: 700;
+                }
+
+                .gossip-sender-council{
+                    color: #dedede;
+                    font-weight: 400;
+                }
+            }
+
+            .gossip-title{
+                display: flex;
+                @include fluidfontsize(1.6rem, 2.2rem);
+                font-weight: 800;
+                color: white;
+            }
+
+            .gossip-body{
+                color: #dedede;
+                @include fluidfontsize(1.2rem, 1.4rem);
+                line-height: 1.2;
+
+                .gossip-reciever{
+                    color: #ffffff;
+                    font-weight: 700;
+                }
+            }
+
+            .gossip-footer{
+                display: flex;
+                justify-content: flex-end;
+                @include fluidfontsize(1rem, 1.2rem);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .gossip-create{
+        display: flex;
+        justify-content: center;
+    }
+}

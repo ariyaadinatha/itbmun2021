@@ -1,0 +1,65 @@
+.councils-body{
+    @include fluidmarginy(3.0rem, 8.5rem);
+    @include sectionProperties(60%);
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%), url(../assets/councils/sectionBody-bgBody.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+
+    h2{
+        text-align: center;
+        @include h2main();
+    }
+
+    .councils-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        min-height:15rem;
+
+        .council{
+            @include fluidpaddingy(1rem, 2rem);
+            
+            min-height:100%;
+            max-width: 14.285%;
+            display: flex;
+            flex-wrap:nowrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+
+            @media screen and (max-width:960px){
+                max-width:33.33%;
+            }
+
+            img{
+                width: 80%;
+            }
+
+            p{
+                @include fluidfontsize(1.2rem, 1.6rem);
+                @include montserrat();
+                @include fluidletterspacing(1.2px, 1.6px);
+                font-weight:700;
+            }
+        }
+
+        .council:hover{
+            background-color:map-get($theme-colors, "secondary-light");
+            
+        }
+
+        .council:active{
+            background-color:map-get($theme-colors, "secondary");
+        }
+
+        @media screen and (max-width:960px) {
+            padding-left:2rem;
+            padding-right:2rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.dashboard-body{
+    // Positioning
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+
+    // Sizing, Margin, Padding
+    width: 100%;
+    height: 100%;
+
+    // Topbar
+    @import "modules/topbar";
+
+    // Container
+    @import "modules/container";
+}

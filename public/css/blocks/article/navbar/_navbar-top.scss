@@ -1,0 +1,79 @@
+#navbar {
+    transition: 0.5s ease-in-out; /* Transition effect when sliding down (and up) */
+}
+
+.navigation{
+
+    @include anchorStyleArticle;
+    background-color:rgba(0, 0, 0, 0);
+    position: fixed;
+    width:100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+
+    ul {
+        padding-inline-start: 0px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        @include fluidmarginx(2rem, 5rem);
+        @include fluidmarginy(2rem, 2rem);
+        
+        @include montserrat();
+        @include fluidfontsize(1.2rem, 1.4rem);
+        font-weight:700;
+        text-transform: uppercase;
+
+        ul.navigation-items{
+            margin: 0;
+            li:not(:first-child)::before{
+                content: "\2003\2003|\2003\2003";
+                color: black !important;
+            }
+
+            @media screen and (max-width:960px){
+                display: none;
+            }
+        }
+
+        .navigation-burger{
+            @media screen and (min-width:960px) {
+                display: none;
+            }
+        }
+
+        li {
+            a {
+                letter-spacing: 1px;
+            }
+
+            .active-nav{
+                color: map-get($theme-colors, "secondary-light");
+            }
+
+            .navigation-logo{
+                @include fluidwidth(8rem, 10rem);
+            }
+
+            h1 {
+                @include fluidfontsize(2.4rem, 3.6rem);
+                @include titilliumWeb();
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: black !important; 
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: black !important;
+}

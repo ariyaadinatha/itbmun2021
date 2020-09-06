@@ -1,0 +1,53 @@
+.gossip-hero{
+    @include sectionProperties(45%);
+    background: linear-gradient(0deg, #0c0c0c 4.51%, rgba(50, 23, 64, 0.5) 85.49%), url(../assets/gossip/gossipHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: flex-end;
+    background-position-y: 45%;
+
+    @media screen and (max-width: 960px) {
+        @include fluidpaddingx(2rem, 5rem);
+    }
+
+    &.gossip-create{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media screen and (max-width:960px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            @include sectionProperties(30%);
+        }
+
+    }
+
+    .hero-desc{
+        h1{
+            @include lemonMilkRegular();
+            @include fluidfontsize(2.4rem, 4.8rem);
+            @include fluidletterspacing(1.8px, 4.8px);
+            line-height: 1.4;
+            margin-bottom: 0px;
+            @media screen and (max-width:960px){
+                line-height: 1.5;
+            }
+
+        }
+    }
+
+    .hero-backicon{
+        @include fluidwidth(2rem, 3rem);
+        transition: all 0.1s;
+
+        &:hover{
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+        }
+    }
+}

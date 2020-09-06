@@ -1,0 +1,60 @@
+.about-body{
+    @include sectionProperties(60%);
+    width: 100%;
+    @include fluidpaddingx(2rem, 12rem);
+
+    .about-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width:100%;
+        min-height:15rem;
+
+        h1{
+            @include h1main();
+        }
+
+        h2{
+            @include h2main();
+        }
+
+        p{
+            @include paragraphMain();
+        }
+
+        .about-content{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 3rem;
+
+            @media screen and (max-width:960px){
+                flex-direction: column;
+            }
+
+            .about-paragraph{
+                width: 50%;
+                @media screen and (max-width:960px){
+                    width: 100%;
+                }
+            }
+
+            .about-image{
+                display: flex;
+                justify-content: center;
+                width: 20%;
+                height: 100%;
+                margin-right: 3rem;
+                margin-bottom: 0rem;
+
+                @media screen and (max-width:960px){
+                    width: 100%;
+                    margin-right: 0rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.registration-hero{
+    @include sectionProperties(60%);
+    background: linear-gradient(359.87deg, #000000 4.51%, rgba(50, 23, 64, 0.5) 85.49%), url(../assets/registration/registrationBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include fluidpadding(2rem, 5rem);
+    display: flex;
+    align-items: flex-end;
+    background-position-y: 70%;
+
+    @media screen and (max-width:960px) {
+        background-position-x: 60%;
+        @include sectionProperties(40%);
+    }
+
+    h1{
+        @include lemonMilkRegular();
+        @include fluidfontsize(2.4rem, 4.8rem);
+        @include fluidletterspacing(1.8px, 4.8px);
+        line-height: 1.4;
+
+        @media screen and (max-width:960px){
+            line-height: 1.5;
+        }
+    }
+}

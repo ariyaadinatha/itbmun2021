@@ -1,0 +1,23 @@
+.dashboard-topbar{
+    // Positioning
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 32;
+
+    // Sizing, Margin, Padding
+    width: 100%;
+    @include fluidheight(6rem, 8rem);
+    @include fluidpaddingx(1.75rem, 3rem);
+
+    // Content Style
+    background-color: #0c0c0c;
+    color: map-get($theme-colors, "heading-main");
+    @include fluidfontsize(1.8rem, 2.2rem);
+
+    .dashboard-topbar-icons{
+        a:not(:first-child){
+            @include fluidpaddingleft(1.2rem, 2rem);
+        }
+    }
+}

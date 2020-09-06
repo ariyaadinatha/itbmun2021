@@ -1,0 +1,26 @@
+.registration-after{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000000 100%), url(../assets/main/introSection-bgWrapper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1{
+        @include h1main();
+        @include lemonMilkRegular();
+        text-align: center;
+        @include fluidletterspacing(1.8px, 4.8px);
+    }
+
+    p{
+        @include paragraphMain();
+        text-align: center;
+        @include fluidfontsize(1.4rem, 1.6rem);
+        margin-top: 2rem;
+    }
+}

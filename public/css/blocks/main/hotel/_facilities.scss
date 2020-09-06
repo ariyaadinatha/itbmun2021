@@ -1,0 +1,349 @@
+@mixin backgroundAnchor($link, $pos) {
+	background: linear-gradient(90deg, #000000 5%, rgba(35, 16, 45, 0.5) 85%),
+						url($link);
+	background-size: cover;
+	transition: all 0.3s;
+	background-position-y: $pos;
+
+	&:hover {
+		background-position-y: $pos + 10%;
+
+		h2 {
+			color: map-get($theme-colors, 'secondary-light');
+			text-decoration: underline;
+		}
+	}
+}
+
+$confRoom: (
+	"amarilis": "../assets/hotelPage/ConferenceRoom/conf_amarilis.jpg",
+	"magnolia": "../assets/hotelPage/ConferenceRoom/conf_magnolia.jpg",
+	"bougenvil": "../assets/hotelPage/ConferenceRoom/conf_bougenvil.jpg",
+	"orchid": "../assets/hotelPage/ConferenceRoom/conf_orchid.jpg",
+	"eidelweis": "../assets/hotelPage/ConferenceRoom/conf_eidelweis.jpg",
+	"pre-function": "../assets/hotelPage/ConferenceRoom/conf_prefunc.jpg",
+	"lavender": "../assets/hotelPage/ConferenceRoom/conf_lavender.jpg",
+	"tulip": "../assets/hotelPage/ConferenceRoom/conf_tulip.jpg"
+);
+
+$other: (
+	"maps" : "../assets/hotelPage/map.jpg",
+	"mariott" : "../assets/hotelPage/lobby2.jpg"
+);
+
+.facilities, .other-jumbotron{
+	@include sectionProperties(30%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000000 100%), url(../assets/main/introSection-bgWrapper.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+
+    h1, p{
+    	margin-block-start: 0;
+    	margin-block-end: 0;
+    	line-height: 1;
+    	text-align: center;
+    }
+
+    h1{
+    	@include lemonMilkRegular();
+    	@include fluidletterspacing(1.4px, 3px);
+    	@include fluidfontsize(2.0rem, 4.2rem);
+    	font-weight: 400;
+    }
+
+    p {
+    	@include fluidfontsize(1.2rem, 2.4rem);
+    	font-weight: 700;
+    }
+}
+
+.conference-room{
+	@include sectionProperties(60%);
+	@include fluidpaddingy(2rem, 5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	h1, .conference-wrapper{
+		width: 100%;
+	}
+
+	h1{
+		@include titilliumWeb();
+		@include fluidpaddingx(2rem, 5rem);
+		@include fluidfontsize(2.4rem, 4.2rem);
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.conference-wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@include fluidpaddingx(2rem, 5rem);
+
+		@media screen and (max-width: 960px){
+			@include fluidpaddingx(0rem, 0rem);
+		}
+
+		.conference-row {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 16rem;
+
+			@media screen and (max-width: 540px){
+				flex-direction: column;
+			}
+
+			a {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+					
+				div {
+					height: 100%;
+					width: 100%;
+					display: flex;
+					align-items: center;
+				}
+
+				@each $name, $url in $confRoom {
+					.bg-#{$name} {
+						@include backgroundAnchor($url, 50%)
+					}
+				}
+			}
+
+			h2 {
+				@include fluidpaddingleft(2rem, 4rem);
+				@include h2main();
+				margin-block-end: 0;
+				margin-block-start: 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.guest-room{
+	display: flex;
+	flex-direction: column;
+
+	h1.guest-room-title {
+		@include titilliumWeb();
+		@include fluidpaddingx(2rem, 5rem);
+		@include fluidfontsize(2.4rem, 4.2rem);
+		line-height: 1;
+		font-weight: 700;
+	}
+
+	.guest-room-hero {
+		@include fluidheight(20rem, 50rem);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%), url(../assets/hotelPage/GuestRoom/deluxe-guest-twin.jpg);
+		background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position-y: 60%;
+    	@include fluidmarginbottom(2rem, 5rem);
+
+		h1, div {
+			width: 100%;
+			height: 100%;
+		}
+
+		h1, p {
+			text-align: center;
+		}
+
+		h1 {
+			margin-block-start: 0;
+			margin-block-end: 0;
+	    	@include lemonMilkRegular();
+    		@include fluidletterspacing(1.4px, 3px);
+    		@include fluidfontsize(2.8rem, 4.8rem);
+    		font-weight: 400;
+		}
+
+		p {
+			@include paragraphMain();
+			line-height: 1.15;
+		}
+
+		.guest-room-desc {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			p {
+				@include fluidwidth(26rem, 42rem);
+			}
+		}
+	}
+
+	.guest-room-features {
+		display: flex;
+		width: 100%;
+		@include fluidpadding(2rem, 5rem);
+
+		.feature-wrapper {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: center;
+
+			@media screen and (max-width: 960px){
+				flex-direction: column;
+			}
+
+			div {
+				width: 25%;
+
+				@media screen and (max-width: 960px) {
+					width: 100%;
+				}
+			}
+
+			h2 {
+				@include h2main();
+			}
+
+			dt {
+				@include paragraphMain();
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+		}
+	}
+}
+
+.hotel-dining{
+	display: flex;
+	flex-direction: column;
+
+	h1.hotel-dining-title {
+		@include titilliumWeb();
+		@include fluidpaddingx(2rem, 5rem);
+		@include fluidfontsize(2.4rem, 4.2rem);
+		line-height: 1;
+		font-weight: 700;
+	}
+
+		.hotel-dining-hero {
+		@include fluidheight(20rem, 50rem);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%), url(../assets/hotelPage/momocafe.jpg);
+		background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position-y: 60%;
+    	@include fluidmarginbottom(2rem, 5rem);
+
+		h1, div {
+			width: 100%;
+			height: 100%;
+		}
+
+		h1, p {
+			text-align: center;
+		}
+
+		h1 {
+			margin-block-start: 0;
+			margin-block-end: 0;
+	    	@include lemonMilkRegular();
+    		@include fluidletterspacing(1.4px, 3px);
+    		@include fluidfontsize(2.8rem, 4.8rem);
+    		font-weight: 400;
+		}
+
+		p {
+			@include paragraphMain();
+			line-height: 1.15;
+		}
+
+		.hotel-dining-desc {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			p {
+				@include fluidwidth(26rem, 42rem);
+			}
+		}
+	}
+}
+
+.other{
+	@include fluidpaddingy(2rem, 5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	h1{
+		width: 100%;
+		@include titilliumWeb();
+		@include fluidpaddingx(2rem, 5rem);
+		@include fluidfontsize(2.4rem, 4.2rem);
+		line-height: 1;
+	}
+
+	.other-wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@include fluidpaddingx(2rem, 5rem);
+
+		@media screen and (max-width: 960px){
+			@include fluidpaddingx(0rem, 0rem);
+		}
+
+		.other-row {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 16rem;
+
+			@media screen and (max-width: 540px){
+				flex-direction: column;
+			}
+
+			a {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+					
+				div {
+					height: 100%;
+					width: 100%;
+					display: flex;
+					align-items: center;
+				}
+
+				@each $name, $url in $other {
+					.bg-#{$name} {
+						@include backgroundAnchor($url, 50%)
+					}
+				}
+			}
+
+			h2 {
+				@include fluidpaddingleft(2rem, 4rem);
+				@include h2main();
+				margin-block-end: 0;
+				margin-block-start: 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

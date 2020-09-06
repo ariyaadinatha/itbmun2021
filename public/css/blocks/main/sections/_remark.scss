@@ -1,0 +1,64 @@
+.main-remark{
+    @include fluidmarginy(3.0rem, 8.5rem);
+    @include sectionProperties(50%);
+
+    h1{
+        @include h1main();
+    }
+
+    .remark-card{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        flex-direction: column;
+        width:100%;
+        @include fluidheight(20rem, 40rem);
+        @include fluidpadding(1.5rem, 4rem);
+        background-color:#242424;
+
+        p{
+            @include fluidfontsize(1.2rem, 1.6rem);
+            margin-bottom: 0px;
+        }
+
+        .remark-card-summary{
+            width:50%;
+            @media screen and (max-width:960px) {
+                width:75%;
+            }
+        }
+
+        .remark-card-footer{
+            width:100%;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
+    .remark-bg-itbmun2020{
+        background: 
+            linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), 
+            linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+          rgba(50, 23, 64, 0.3) 80.76%),
+            url(../assets/main/section-remark/SecgenITBMUN.jpg);
+            background-position-x: 100%;
+    }
+
+    .remark-bg-gmunc{
+        background: 
+            linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), 
+            linear-gradient(90deg, #000000 25.19%, rgba(20, 9, 25, 0.75) 63.39%,
+          rgba(50, 23, 64, 0.3) 80.76%),
+            url(../assets/main/section-remark/SecgenGMUNC.jpg);
+            background-position-x: 80%;
+    }
+
+    .remark-bg-itbmun2020, .remark-bg-gmunc{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

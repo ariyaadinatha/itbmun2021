@@ -1,0 +1,65 @@
+.hotel-blurb{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+    @include fluidpaddingy(3.5rem, 5rem);
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hotel-blurb-desc, .hotel-blurb-picture {
+        width: 100%;
+        display: flex;
+    }
+
+    .hotel-blurb-picture {
+        @include fluidheight(15rem, 30rem);
+        background: linear-gradient(90deg, #000000 4.51%, rgba(35, 16, 45, 0.4) 85.49%), url(../assets/hotelPage/lobby.jpg);
+        background-size: cover;
+    }
+
+    .hotel-blurb-desc{
+        @include fluidpaddingx(2rem, 5rem);
+        display: flex;
+        flex-direction: column;
+	    width: 100%;
+        height: 300px;
+
+        a:hover {
+            color: map-get($theme-colors, 'primary');
+        }
+
+        h2 {
+            @include h2main();
+            text-decoration: underline;
+            @include fluidpaddingy(1rem, 2rem);
+        }
+
+        p {
+            @include paragraphMain();
+            margin-block-end: 0;
+            margin-block-start: 0;
+        }
+
+        @media screen and (max-width: 960px){
+            @include fluidpaddingy(2rem, 3rem);
+        }
+
+        .hotel-blurb-rating{
+            text-align: left;
+            img {
+                max-width: 200px;
+            }
+
+            @media screen and (max-width: 960px){
+                text-align: center;
+            }
+        }
+    }
+}

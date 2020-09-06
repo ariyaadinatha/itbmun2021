@@ -1,0 +1,42 @@
+.main-intro{
+    width: 100%;
+    min-height: 50%;
+    @include fluidpaddingy(3.0rem, 8.5rem);
+    @include fluidpaddingx(2rem, 3rem);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000000 100%), url(../assets/main/introSection-bgWrapper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .main-intro-wrapper{
+        width: 33.33%;
+        text-align: center;
+
+        @media screen and (max-width: 960px) {
+            @include fluidwidth(32rem, 64rem);
+        }
+
+        p{
+            @include fluidfontsize(1.6rem, 2.0rem);  
+            margin-bottom: 2rem;
+        }
+
+        h1, h2{
+            color: map-get($theme-colors, "white");
+        }
+
+        h2{
+            @include fluidfontsize(2.0rem, 2.8rem);  
+            @include fluidmarginbottom(5rem, 10rem);
+        }
+
+        h1{
+            @include titilliumWeb();
+            font-weight: 700;
+            @include fluidfontsize(2.4rem, 3.6rem);
+            margin-bottom: 2rem;
+        }
+    }
+}

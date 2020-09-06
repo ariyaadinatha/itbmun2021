@@ -1,0 +1,22 @@
+.dashboard-container{
+    // Positioning
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 960px){
+        flex-direction: column-reverse;
+    }
+    // Sizing, Margin, Padding
+    width: 100%;
+    height: 100%;
+    z-index: 16;
+
+    // Content Style
+    background-color: #111111;
+
+    // Container Sidebar Navigation
+    @import "containerModules/navigation";
+
+    // Container Content
+    @import "containerModules/content";
+}

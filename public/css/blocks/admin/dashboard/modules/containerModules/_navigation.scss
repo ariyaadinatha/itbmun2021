@@ -1,0 +1,80 @@
+.dashboard-navigation{
+    // Sizing, Margin, Padding
+    width: 25rem;
+    height: 100%;
+    z-index: 24;
+
+    @media screen and (max-width: 960px){
+        width: 100%;
+        height: auto; 
+    }
+
+    // Content Style
+    background-color: map-get($theme-colors, "primary-darkest");
+
+    .dashboard-pills-container{
+        // Positioning
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        @media screen and (max-width: 960px){
+            flex-direction: row;
+        }
+
+        // Sizing
+        width: 100%;
+
+        .dashboard-pill{                    
+            // Positioning
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            @media screen and (max-width: 960px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            // Sizing, Margin, Padding
+            width: 100%;
+            @include fluidpaddingx(1.75rem, 3rem);
+            @include fluidpaddingy(1rem, 1.75rem);
+
+            @media screen and (max-width: 960px){
+                width: auto;
+            }
+
+            // Content Style
+            background-color: transparent;
+            transition: 0.3s all;
+
+            img{
+                @include fluidwidth(2.2rem, 3.5rem);
+                padding-right: 1.2rem;
+                padding-bottom: 0;
+
+                @media screen and (max-width: 960px){
+                    padding-right: 0;
+                    padding-bottom: 0.8rem;
+                }
+            }
+
+            p{
+                margin-bottom: 0;
+                @include fluidfontsize(1.0rem, 1.2rem);
+            }
+
+            &:hover, &.active-nav:hover{
+                background-color: map-get($theme-colors, "primary-dark")
+            }
+
+            &:active, &.active-nav{
+                background-color: map-get($theme-colors, "primary-darker")
+            }
+        }
+    }
+}

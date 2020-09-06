@@ -1,0 +1,31 @@
+@mixin anchorStyleArticle{
+    a{
+        color: map-get($theme-colors, "black");
+    }
+    
+    a:hover{
+        text-decoration: none;
+        color: map-get($theme-colors, "secondary-light" )
+    }
+    
+    a:active{
+        text-decoration: none;
+        color: map-get($theme-colors, "secondary" )
+    }
+}
+
+@mixin anchorStyleArticle2{
+    a{
+        color: map-get($theme-colors, "primary");
+    }
+    
+    a:hover{
+        text-decoration: none;
+        color: map-get($theme-colors, "secondary-light" )
+    }
+    
+    a:active{
+        text-decoration: none;
+        color: map-get($theme-colors, "secondary" )
+    }
+}
