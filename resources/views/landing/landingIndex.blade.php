@@ -105,7 +105,7 @@
     </section>
 
 
-    <section class='main-registration'>
+ <!--    <section class='main-registration'>
         <div class="row">
             <div class="col-md-8 offset-md-2 col-12">
                 <h1>
@@ -122,7 +122,7 @@
                 </h1>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <section class="councils-body">

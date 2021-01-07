@@ -17,11 +17,10 @@
 
         <section class='gossip-index' id='index'>
             @if(count($gossips) > 0)
-            <!-- disembunyikan ea
                 <div class="gossip-create">
                     <a href="/gossip/create" class='button-white-transparent'>Create another gossip</a>
                 </div>
-              -->
+  
                 <div class="gossip-navigation">
                     {{ $gossips->links() }}
                 </div>
