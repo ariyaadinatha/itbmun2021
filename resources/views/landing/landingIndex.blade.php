@@ -20,6 +20,8 @@
 
 @section('title', 'Landing - ITBMUN 2020')
 
+
+
 @section('content')
 <!-- ## 1. Sidebar Navigation ========= -->
     @include('components.sidebar-main')
@@ -130,33 +132,47 @@
             <div class="col-md-8 offset-md-2 col-12">
                 <h2> ITBMUN Values </h2>
                 <div class="councils-wrapper">
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/memorable.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/sustainable.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/professional.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/exceptional.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/personal.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/inclusive.png')}}">
-                    </a>
-                    <a class="council" href='#'>
-                        <img src="{{URL::asset('assets/values/realistic.png')}}">
-                    </a>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/memorable.png')}}" onclick="popupUp('myPopup1')">
+                        <span class="popuptext" id="myPopup1">through a series of event and projects, ITBMUN 2021 is one of a kind Model UN worth experiencing</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/sustainable.png')}}" onclick="popupUp('myPopup2')">
+                        <span class="popuptext" id="myPopup2">a conference made to care for the environment</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/professional.png')}}" onclick="popupUp('myPopup3')">
+                        <span class="popuptext" id="myPopup3">organized team in constant pursuit of excellence</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/exceptional.png')}}" onclick="popupUp('myPopup4')">
+                        <span class="popuptext" id="myPopup4">distinguished academics quality providing excellent substance</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/personal.png')}}" onclick="popupUp('myPopup5')">
+                        <span class="popuptext" id="myPopup5">growth in skill development in every step of the way</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/inclusive.png')}}" onclick="popupUp('myPopup6')">
+                        <span class="popuptext" id="myPopup6">alongside our community, we hope each individual involved in ITBMUN 2021 are exposed to numbers of opportunities regardless of their background</span>
+                    </div>
+
+                    <div class="popup">
+                        <img src="{{URL::asset('assets/values/realistic.png')}}" onclick="popupUp('myPopup7')">
+                        <span class="popuptext" id="myPopup7">dynamic committee sessions with realistic approach</span>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </section>
-
-
 
     
 
@@ -347,10 +363,22 @@
 <!-- ## END of Footer Navigation ========= -->
 
     </main>
-
 @endsection
 
+
+<script>
+// When the user clicks on div, open the popup
+function popupUp(param1) {
+  var popup = document.getElementById( param1 );
+  popup.classList.toggle("show");
+}
+</script>
+
 @section('script')
+
 <script src="{{URL::asset('js/nav-scroll.js')}}"></script>
 <script src="{{URL::asset('js/navigation.js')}}"></script>
+
+
+
 @endsection

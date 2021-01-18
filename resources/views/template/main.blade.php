@@ -46,6 +46,7 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="{{URL::asset('css/base.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
     <!-- END of Local CSS -->
 
     <!-- Metas -->
