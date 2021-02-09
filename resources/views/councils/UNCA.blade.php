@@ -24,7 +24,11 @@
             <div class="about-paragraph text-justify">
                 <h2>UNCA</h2>
                 <p>
-                    @section('desc')
+                 What should the delegates expect from this council?
+                <br>    1. You are jack-of-all-trades (as you will enter various councils’ room during the MUN)
+                <br>    2. Love to hear and write down ideas, even more than have speeches
+                <br>    3. Become a legit journalist for international issues in 2-days (no matter where you’re from)
+                <br>    4. Interested in producing articles from all councils and topics in ITBMUN 2021
                 </p>
             </div>
         </div>

@@ -25,6 +25,12 @@
                 <h2>UNSC</h2>
                 <p id="#desc">
                 South China Sea is stuck in the crossfire of escalating brinkmanship. In April 2020, the recovered China has seized the chance to declare two new administrative districts in the Spratlys and Paracels while continuing to buzz and tail non-Chinese naval crafts. Responding to this, for the first time, the United States hardened their stance by stating China’s claim as unlawful, preceded by increasing Freedom of Navigation Operations (FONOPs) with both the United Kingdom and Australia. ASEAN has vigilantly involved themselves as well, with Vietnam, Philippines, and Indonesia, among others, have denounced China’s recent action while only acknowledging the United Nations Convention on the Law of the Sea (UNCLOS) as a basis for further exchanges. With the West Capella stands off, diplomatic discussions - including the Single Draft for Code of Conduct in 2018 - are at risk of being pushed further behind. As tension continues to ignite, stance continues to harden, and diplomacy starts to fall out of favor, The ITBMUN 2021 UN Security Council must stand in to prevent South East Asia from becoming a battleground of powers.
+                <br><br>What should the delegates expect from this council?
+                <br>    1.Interested in discussing the high tension happening in the South China Sea
+                <br>    2.Interested in understanding and studying the basics of international law
+                <br>    3.Have a high capability of diplomacy and negotiation
+                <br>    4.Devoted to teamwork and have a good coordination with your partner delegate
+
                 </p>
             </div>
         </div>

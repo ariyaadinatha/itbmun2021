@@ -76,7 +76,24 @@
             </div>
         </section>
 
-
+    <section class='main-registration'>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-12">
+                <h1>
+                    REGISTRATION<br>
+                    &mdash;
+                </h1>
+                <div class="main-registration-wrapper">
+                    <a href='bit.ly/ITBMUNEarlyBird' target="_blank" class="main-registration-card">
+                        <div class="bg-register">
+                            <h2>Early Birds Registration&emsp;<br><i class="fas fa-long-arrow-alt-right"></i></h2>
+                        </div>
+                    </a>
+                </div>
+                </h1>
+            </div>
+        </div>
+    </section>
 
     <section class="about-body">
         <section class="about-wrapper">
@@ -97,24 +114,7 @@
     </section>
 
 
- <!--    <section class='main-registration'>
-        <div class="row">
-            <div class="col-md-8 offset-md-2 col-12">
-                <h1>
-                    REGISTRATION<br>
-                    &mdash;
-                </h1>
-                <div class="main-registration-wrapper">
-                    <a href='http://tiny.cc/ChairsITBMUN2021' target="_blank" class="main-registration-card">
-                        <div class="bg-register">
-                            <h2>Calling For Chairs&emsp;<br><i class="fas fa-long-arrow-alt-right"></i></h2>
-                        </div>
-                    </a>
-                </div>
-                </h1>
-            </div>
-        </div>
-    </section> -->
+
 
 
     <section class="councils-body">
