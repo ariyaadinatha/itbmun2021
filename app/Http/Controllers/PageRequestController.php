@@ -35,9 +35,9 @@ class PageRequestController extends Controller
         return view("councils.councilsIndex");
     }
 
-    // ## -- 6. View Councils WHA
-    public function viewCouncilsWHA(){
-        return view("councils.WHA");
+    // ## -- 6. View Councils UNODC
+    public function viewCouncilsUNODC(){
+        return view("councils.UNODC");
     }
 
     // ## -- 7. View Councils UNEP
@@ -45,14 +45,14 @@ class PageRequestController extends Controller
         return view("councils.UNEP");
     }  
 
-    // ## -- 8. View Councils DISEC
-    public function viewCouncilsDISEC(){
-        return view("councils.DISEC");
+    // ## -- 8. View Councils WB
+    public function viewCouncilsWB(){
+        return view("councils.WB");
     }  
 
-    // ## -- 9. View Councils UNESCO
-    public function viewCouncilsUNESCO(){
-        return view("councils.UNESCO");
+    // ## -- 9. View Councils UNW
+    public function viewCouncilsUNW(){
+        return view("councils.UNW");
     }  
 
     // ## -- 10. View Councils CRISIS

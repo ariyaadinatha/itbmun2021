@@ -78,29 +78,19 @@
 
 
 
-        <section class="about-body">
+    <section class="about-body">
         <section class="about-wrapper">
-
             <div class="about-content">
                 <div class="about-image">
-                    
                 </div>
 
-
-
                 <div class="about-paragraph">
-                    <h2>
-                        LOGO AND THEME REVEAL
-                    </h2>
+                    <h2>LOGO AND THEME REVEAL</h2>
                     <p>
                         In the modern era, nothing in our world is ever certain. We experience far greater changes in our world than ever before, from the change in climate, economic downturns, to cultural reforms. Challenges in our time has threatened the function, survival, and future development of our world. The time has come for us to adapt and integrate in the midst of adversity. Prepare, delegates, to a once in a lifetime journey ; 
                     </p>
-                    <p>
-                        "ITBMUN 2021 : Resilience in Face of a Changing Global Landscape"
-                    </p>
-                    <p>
-                        #HarmonyInDiplomacy <br> #ITBMUN #ITBMUN2021
-                    </p>
+                    <p> "ITBMUN 2021 : Resilience in Face of a Changing Global Landscape" </p>
+                    <p> #HarmonyInDiplomacy <br> #ITBMUN #ITBMUN2021 </p>
                 </div>
             </div>
         </section>

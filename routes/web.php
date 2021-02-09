@@ -22,14 +22,16 @@ Route::get('/landing/hotel', 'PageRequestController@viewHotelPage');
 Route::get('/remark/secgen2020', 'PageRequestController@viewRemarkSecgen2020');
 Route::get('/remark/secgenGMUNC', 'PageRequestController@viewRemarkSecgenGmunc');
 Route::get('/about', 'PageRequestController@viewAbout');
-//D Route::get('/councils', 'PageRequestController@viewCouncils');
-//D Route::get('/councils/WHA', 'PageRequestController@viewCouncilsWHA');
-//D Route::get('/councils/UNEP', 'PageRequestController@viewCouncilsUNEP');
-//D Route::get('/councils/DISEC', 'PageRequestController@viewCouncilsDISEC');
-//D Route::get('/councils/UNESCO', 'PageRequestController@viewCouncilsUNESCO');
-//D Route::get('/councils/CRISIS', 'PageRequestController@viewCouncilsCRISIS');
-//D Route::get('/councils/UNSC', 'PageRequestController@viewCouncilsUNSC');
-//D Route::get('/councils/UNCA', 'PageRequestController@viewCouncilsUNCA');
+
+
+Route::get('/councils', 'PageRequestController@viewCouncils');
+Route::get('/councils/UNW', 'PageRequestController@viewCouncilsUNW');
+Route::get('/councils/UNEP', 'PageRequestController@viewCouncilsUNEP');
+Route::get('/councils/WorldBank', 'PageRequestController@viewCouncilsWB');
+Route::get('/councils/UNODC', 'PageRequestController@viewCouncilsUNODC');
+Route::get('/councils/CRISIS', 'PageRequestController@viewCouncilsCRISIS');
+Route::get('/councils/UNSC', 'PageRequestController@viewCouncilsUNSC');
+Route::get('/councils/UNCA', 'PageRequestController@viewCouncilsUNCA');
 
 //D Route::get('/registration', 'PageRequestController@viewRegistrationLanding');
 //D Route::get('/registration/information', 'PageRequestController@viewRegistrationInformation');

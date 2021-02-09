@@ -6,7 +6,7 @@
         <ul class='navigation-items'>
             <li class='navigation-item'><a href="/landing">Home</a></li>
             <li class='navigation-item'><a href="/about">About</a></li>
-            <!--D <li class='navigation-item'><a href="/councils">Councils</a></li>  -->
+            <li class='navigation-item'><a href="/councils">Councils</a></li>
             <!-- <li class='navigation-item'><a href="/registration">Registration</a></li> -->
             <!--D <li class='navigation-item'><a href="/registration">Registration</a></li> -->
             <li class='navigation-item'><a href="/press">Press</a></li>
