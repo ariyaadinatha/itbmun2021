@@ -19,12 +19,26 @@
 
 <!-- ## 3. Councils Section ========= -->
 @include('components.council')
+
+<style>
+.councils-hero {
+    background: linear-gradient(
+            359.87deg,
+            #000000 4.51%,
+            rgba(50, 23, 64, 0.5) 85.49%
+        ),
+        url({{URL::asset('assets/councils/UNCA-BG.png')}});
+}
+</style>
+
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="about-paragraph text-justify">
                 <h2>UNCA</h2>
                 <p>
-                 What should the delegates expect from this council?
+                The United Nations Correspondents Association, commonly abbreviated as the UNCA, is a United Nations organization comprising over two hundred official media representatives worldwide with the prerogative to cover news from within the UN. Established in 1948, the UNCA is the representative body for the UN press corps. Regular members of the UNCA are invited to attend conferences held by other UN bodies and are tasked to make coverage on the proceedings of activities conducted by the UN.
+                <br> <br>
+                 This council is for you if :
                 <br>    1. You are jack-of-all-trades (as you will enter various councils’ room during the MUN)
                 <br>    2. Love to hear and write down ideas, even more than have speeches
                 <br>    3. Become a legit journalist for international issues in 2-days (no matter where you’re from)
