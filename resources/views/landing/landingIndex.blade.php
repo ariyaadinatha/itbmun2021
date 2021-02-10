@@ -84,7 +84,7 @@
                     &mdash;
                 </h1>
                 <div class="main-registration-wrapper">
-                    <a href='bit.ly/ITBMUNEarlyBird' target="_blank" class="main-registration-card">
+                    <a href='https://bit.ly/ITBMUNEarlyBird' target="_blank" class="main-registration-card">
                         <div class="bg-register">
                             <h2>Early Birds Registration&emsp;<br><i class="fas fa-long-arrow-alt-right"></i></h2>
                         </div>
