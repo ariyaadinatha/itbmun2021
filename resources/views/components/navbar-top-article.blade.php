@@ -8,6 +8,7 @@
             <li class='navigation-item'><a href="/about">About</a></li>
             <li class='navigation-item'><a href="/councils">Councils</a></li>
             <li class='navigation-item'><a href="/registration">Registration</a></li>
+            <li class='navigation-item'><a href="/merch">Merch</a></li>
             <li class='navigation-item'><a href="/press">Press</a></li>
             <li class='navigation-item'><a href="/gossip">Gossip Box</a></li>
             <li class='navigation-item'><a href="/question">Question Box</a></li>

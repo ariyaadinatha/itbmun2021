@@ -60,7 +60,7 @@ Route::get('/councils/UNCA', 'PageRequestController@viewCouncilsUNCA');
 Route::post('/registration/individual-delegate', 'IndividualDelegatesController@sendDataIndividualDelegate');
 Route::post('/registration/delegations', 'DelegationsController@sendDataDelegations');
 Route::get('/registration', function() {return redirect()->to("https://bit.ly/ITBMUNEarlyBird");});
-
+Route::get('/merch', function() {return redirect()->to("https://bit.do/itbmun2021merch");});
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
