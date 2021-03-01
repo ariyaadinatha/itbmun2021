@@ -59,7 +59,7 @@ Route::get('/registration/policy', 'PageRequestController@viewRegistrationPolicy
 
 Route::post('/registration/individual-delegate', 'IndividualDelegatesController@sendDataIndividualDelegate');
 Route::post('/registration/delegations', 'DelegationsController@sendDataDelegations');
-// Route::get('/registration', function() {return redirect()->to("https://bit.ly/ITBMUNRegularRegistration");});
+Route::get('/registrationregular', function() {return redirect()->to("https://bit.ly/ITBMUNRegularRegistration");});
 Route::get('/merch', function() {return redirect()->to("https://bit.do/itbmun2021merch");});
 
 Auth::routes();
