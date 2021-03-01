@@ -33,9 +33,9 @@ Route::get('/councils/CRISIS', 'PageRequestController@viewCouncilsCRISIS');
 Route::get('/councils/UNSC', 'PageRequestController@viewCouncilsUNSC');
 Route::get('/councils/UNCA', 'PageRequestController@viewCouncilsUNCA');
 
-//D Route::get('/registration', 'PageRequestController@viewRegistrationLanding');
-//D Route::get('/registration/information', 'PageRequestController@viewRegistrationInformation');
-//D Route::get('/registration/policy', 'PageRequestController@viewRegistrationPolicy');
+Route::get('/registration', 'PageRequestController@viewRegistrationLanding');
+Route::get('/registration/information', 'PageRequestController@viewRegistrationInformation');
+Route::get('/registration/policy', 'PageRequestController@viewRegistrationPolicy');
 
 // Route::get('/test', 'PageRequestController@viewTest');
 // Route::get('/blog', 'PageRequestController@viewBlogTest');
@@ -59,7 +59,7 @@ Route::get('/councils/UNCA', 'PageRequestController@viewCouncilsUNCA');
 
 Route::post('/registration/individual-delegate', 'IndividualDelegatesController@sendDataIndividualDelegate');
 Route::post('/registration/delegations', 'DelegationsController@sendDataDelegations');
-Route::get('/registration', function() {return redirect()->to("https://bit.ly/ITBMUNEarlyBird");});
+// Route::get('/registration', function() {return redirect()->to("https://bit.ly/ITBMUNRegularRegistration");});
 Route::get('/merch', function() {return redirect()->to("https://bit.do/itbmun2021merch");});
 
 Auth::routes();
