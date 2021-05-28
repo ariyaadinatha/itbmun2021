@@ -92,6 +92,11 @@
                                     <input type="radio" class="individual-radio" name="council" value="World Bank">
                                     <span class='radio-button'><span></span></span>
                                 </label>
+                                <label>
+                                    <span class='radio-description'>Prefer not to say</span>
+                                    <input type="radio" class="individual-radio" name="council" value="" checked>
+                                    <span class='radio-button'><span></span></span>
+                                </label>
                             </div>
                         </div>
                     </div>
