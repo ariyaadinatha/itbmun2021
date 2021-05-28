@@ -59,6 +59,7 @@
                                     {{$gossip->created_at}}
                                 </span>
                             </div>
+                            <!--
                             <div class="d-flex vote">
                                 <img src="./assets/gossip/upVote.svg" height=30px>
                                 <div class="gossip-body pt-3 pl-1 pr-1">
@@ -68,6 +69,7 @@
                                     <img src="./assets/gossip/downVote.svg" height=30px>
                                 </div>
                             </div>
+                            -->
                         </div>
                     @endforeach
                 </div>

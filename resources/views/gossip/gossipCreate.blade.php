@@ -63,43 +63,33 @@
                             <div class="registration-radio-wrapper">
                                 <p class='radio-header'>Sender's Council</p>
                                 <label>
-                                    <span class='radio-description'>WHA</span>
-                                    <input type="radio" class="individual-radio" name="council" value="WHA">
-                                    <span class='radio-button'><span></span></span>
-                                </label>
-                                <label>
-                                    <span class='radio-description'>UNEP</span>
-                                    <input type="radio" class="individual-radio" name="council" value="UNEP">
-                                    <span class='radio-button'><span></span></span>
-                                </label>
-                                <label>
-                                    <span class='radio-description'>DISEC</span>
-                                    <input type="radio" class="individual-radio" name="council" value="DISEC">
-                                    <span class='radio-button'><span></span></span>
-                                </label>
-                                <label>
-                                    <span class='radio-description'>UNESCO</span>
-                                    <input type="radio" class="individual-radio" name="council" value="UNESCO">
-                                    <span class='radio-button'><span></span></span>
-                                </label>
-                                <label>
-                                    <span class='radio-description'>Historical Crisis Council</span>
-                                    <input type="radio" class="individual-radio" name="council" value="CRISIS">
-                                    <span class='radio-button'><span></span></span>
-                                </label>
-                                <label>
-                                    <span class='radio-description'>Futuristic UNSC</span>
+                                    <span class='radio-description'>UNSC</span>
                                     <input type="radio" class="individual-radio" name="council" value="UNSC">
                                     <span class='radio-button'><span></span></span>
                                 </label>
                                 <label>
-                                    <span class='radio-description'>UNCA PRESS</span>
-                                    <input type="radio" class="individual-radio" name="council" value="UNCA PRESS">
+                                    <span class='radio-description'>CRISIS</span>
+                                    <input type="radio" class="individual-radio" name="council" value="CRISIS">
                                     <span class='radio-button'><span></span></span>
                                 </label>
                                 <label>
-                                    <span class='radio-description'>Prefer not to say</span>
-                                    <input type="radio" class="individual-radio" name="council" value="" checked>
+                                    <span class='radio-description'>UNCA</span>
+                                    <input type="radio" class="individual-radio" name="council" value="UNCA">
+                                    <span class='radio-button'><span></span></span>
+                                </label>
+                                <label>
+                                    <span class='radio-description'>UN Women</span>
+                                    <input type="radio" class="individual-radio" name="council" value="UN Women">
+                                    <span class='radio-button'><span></span></span>
+                                </label>
+                                <label>
+                                    <span class='radio-description'>UNODC</span>
+                                    <input type="radio" class="individual-radio" name="council" value="UNODC">
+                                    <span class='radio-button'><span></span></span>
+                                </label>
+                                <label>
+                                    <span class='radio-description'>World Bank</span>
+                                    <input type="radio" class="individual-radio" name="council" value="World Bank">
                                     <span class='radio-button'><span></span></span>
                                 </label>
                             </div>
