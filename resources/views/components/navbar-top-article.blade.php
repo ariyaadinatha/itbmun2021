@@ -12,6 +12,7 @@
             <li class='navigation-item'><a href="/press">Press</a></li>
             <li class='navigation-item'><a href="/gossip">Gossip Box</a></li>
             <li class='navigation-item'><a href="/question">Question Box</a></li>
+            <li class='navigation-item'><a href="/sponsors">Sponsors</a></li>
             <!--<li class='navigation-item'><a href="/articles">Articles</a></li>
             <li class='navigation-item'><a href="/documents">Documents</a></li>
             <li class='navigation-item'><a href="/press">Press</a></li>-->

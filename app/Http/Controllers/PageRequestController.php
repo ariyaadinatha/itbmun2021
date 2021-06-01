@@ -75,6 +75,26 @@ class PageRequestController extends Controller
         return view("registration.registrationLanding");
     }
 
+    // ## -- 14. View Sponsors
+    public function viewSponsors(){
+        return view("sponsor.sponsorIndex");
+    }
+
+    // ## -- 14. View Sponsors Nutrifood
+    public function viewSponsorsNutrifood(){
+        return view("sponsor.nutrifoodIndex");
+    }
+
+    // ## -- 14. View Sponsors Les Lia
+    public function viewSponsorsLembagaLesLia(){
+        return view("sponsor.liaIndex");
+    }
+
+    // ## -- 14. View Sponsors Penjamin Simpanan
+    public function viewSponsorsLembagaPenjaminSimpanan(){
+        return view("sponsor.pinjamanIndex");
+    }
+
     public function viewRegistrationInformation(){
         return view("registration.registrationInformation");
     }
@@ -83,7 +103,7 @@ class PageRequestController extends Controller
         return view("registration.registrationPolicy");
     }
 
-    // ## -- 14. View test Page
+    // ## -- 15. View test Page
     public function viewTest(){
         return view("test.database");
     }

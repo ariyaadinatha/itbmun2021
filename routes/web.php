@@ -82,6 +82,12 @@ Route::get('/gossip', 'GossipController@viewGossipIndex');
 Route::get('/gossip/create', 'GossipController@create');
 Route::post('/gossip/create', 'GossipController@store');
 
+Route::get('/sponsors', 'PageRequestController@viewSponsors');
+Route::get('/sponsors/nutrifood', 'PageRequestController@viewSponsorsNutrifood');
+Route::get('/sponsors/lembaga-les-lia', 'PageRequestController@viewSponsorsLembagaLesLia');
+Route::get('/sponsors/lembaga-penjamin-simpanan', 'PageRequestController@viewSponsorsLembagaPenjaminSimpanan');
+
+
 
 Route::get('/question','QuestionController@questionView');
 Route::post('/question/send','QuestionController@send');
